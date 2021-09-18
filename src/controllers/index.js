@@ -1,1 +1,1 @@
-module.exports.spaceController = require('./space.controller');
+module.exports.cacheController = require('./cache.controller');

@@ -1,5 +1,5 @@
 const express = require('express');
-const spaceRoute = require('./space.route');
+const cacheRoute = require('./cache.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
@@ -7,8 +7,8 @@ const router = express.Router();
 
 const defaultRoutes = [
   {
-    path: '/spaces',
-    route: spaceRoute,
+    path: '/cache',
+    route: cacheRoute,
   },
 ];
 

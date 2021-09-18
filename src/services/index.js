@@ -1,1 +1,1 @@
-module.exports.spaceService = require('./space.service');
+module.exports.cacheService = require('./cache.service');
