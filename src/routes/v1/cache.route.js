@@ -1,10 +1,12 @@
 const express = require('express');
 const auth = require('../../shared/middlewares/auth');
+const validate = require('../../shared/middlewares/validate');
 const cacheController = require('../../controllers/cache.controller');
+const validations = require('../../validations/cache.validations');
 
 const router = express.Router();
 
-router.get('/', auth(), cacheController.getAll);
+router.post('/', auth(), validate(validations.getCache), cacheController.getAll);
 
 module.exports = router;
 
