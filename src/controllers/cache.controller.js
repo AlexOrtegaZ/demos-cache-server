@@ -2,9 +2,9 @@ const catchAsync = require('../shared/utils/catchAsync');
 const { cacheService } = require('../services');
 
 const getAll = catchAsync(async (req, res) => {
-  const cognitoId = req.user.username;
+  const { user } = req;
   const { lastUpdatedDate } = req.body;
-  const cache = await cacheService.getAll(cognitoId, lastUpdatedDate);
+  const cache = await cacheService.getAll(user, lastUpdatedDate);
   res.send(cache);
 });
 

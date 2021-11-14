@@ -6,7 +6,6 @@ const getCache = {
   }),
 };
 
-
 module.exports = {
   getCache,
 };
